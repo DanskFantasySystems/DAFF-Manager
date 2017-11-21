@@ -18,7 +18,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 
 @Controller
-public class DraftPlayersController {
+public class LeagueDetailsController {
 
     @Autowired
     private PlayerRepository playerRepository;
