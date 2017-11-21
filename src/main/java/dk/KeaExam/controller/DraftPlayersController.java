@@ -29,7 +29,7 @@ public class DraftPlayersController {
     @Autowired
     private UserRepository userRepository;
 
-    @GetMapping("/leagueDetails")
+    @GetMapping("/leaguedetails")
     public ModelAndView LeagueDetails(Model model, @RequestParam("league_id") int league_id) {
 
         //Finder ligaen brugeren ønsker at se details for
