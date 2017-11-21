@@ -30,12 +30,12 @@ public class DraftPlayersController {
     private UserRepository userRepository;
 
     @GetMapping("/leagueDetails")
-    public ModelAndView CreateLeague(Model model, @RequestParam("league_id") int league_id) {
+    public ModelAndView LeagueDetails(Model model, @RequestParam("league_id") int league_id) {
 
         //Finder ligaen brugeren ønsker at se details for
         League league = leagueRepository.getOne(league_id);
         League leaguee = leagueRepository.getOne(2);
-
+        model.addAttribute("drafttime", league);
 
         //Finder brugeren
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
