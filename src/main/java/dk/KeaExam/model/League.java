@@ -1,5 +1,7 @@
 package dk.KeaExam.model;
 
+import org.hibernate.annotations.ColumnDefault;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
@@ -27,6 +29,12 @@ public class League {
 
     @NotNull
     private int ownerid;
+
+    @Column(name = "draft_format")
+    private int draftFormat;
+
+    @Column(name = "league_format")
+    private int leagueFormat;
 
     @Column
     private LocalDateTime draftDate;
@@ -97,6 +105,22 @@ public class League {
 
     public void addUsers(User user) {
         this.users.add(user);
+    }
+
+    public int getDraftFormat() {
+        return draftFormat;
+    }
+
+    public void setDraftFormat(int draftFormat) {
+        this.draftFormat = draftFormat;
+    }
+
+    public int getLeagueFormat() {
+        return leagueFormat;
+    }
+
+    public void setLeagueFormat(int leagueFormat) {
+        this.leagueFormat = leagueFormat;
     }
 
     @Override

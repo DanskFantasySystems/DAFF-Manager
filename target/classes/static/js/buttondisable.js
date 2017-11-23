@@ -28,35 +28,10 @@ var x = setInterval(function() {
         $("#demo").fadeTo(2500, 0);
         myBtn.innerHTML = "Click Me!";
         clearInterval(x);
-        //document.getElementById("demo").innerHTML = "EXPIRED";
     }
 }, 1000);
 
 
 /*
 var draftdate = new Date(JSON.parse(document.getElementById('draftdate')).getTime());
-var myBtn = document.getElementById('myBtn');
-
-
-var x = setInterval(function () {
-    var currentdate = new Date().getTime();
-
-    var countdown = draftdate - currentdate;
-
-    var days = Math.floor(countdown / 1000 * 60 * 60 * 24);
-    var hours = Math.floor((countdown % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((countdown % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((countdown % (1000 * 60)) / 1000);
-
-    document.getElementById("demo").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s";
-
-    if (countdown <= 0) {
-        $("#myBtn").removeAttr("disabled");
-        $("#myBtn").removeClass().addClass("btnEnable");
-        $("#demo").fadeTo(2500, 0);
-        myBtn.innerHTML = "Click Me!";
-        clearInterval(x);
-
-    }
-},1000)
 */
